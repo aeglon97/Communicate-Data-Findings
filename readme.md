@@ -13,7 +13,9 @@ The overall motivation for this project is to *explore what factors shape a stud
 
 ## Summary of Findings
 
-> Summarize all of your findings from your exploration here, whether you plan on bringing them into your explanatory presentation or not.
+### Missing Data
+
+As documented in our data wrangling phase, we isolated the 
 
 
 ## Key Insights for Presentation
