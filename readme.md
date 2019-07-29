@@ -21,3 +21,8 @@ As documented in our data wrangling phase, we isolated the
 ## Key Insights for Presentation
 
 > Select one or two main threads from your exploration to polish up for your presentation. Note any changes in design from your exploration step here.
+
+- Female students tend to have a greater work ethic than male students, but a far lesser self-esteem.
+
+- Students from an immigrant background tend to score higher on reading, math, and science tests, but also have an overall lesser student drive than students who don't come from an immigrant background.
+
