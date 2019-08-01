@@ -1,19 +1,17 @@
-# PISA Dataset Visualization
+# PISA 2012 DATA EXPLORATION & VISUALIZATION
 ## by Marc Angelo Acebedo
 
 
 ## Dataset
 
-PISA is a survey of students' skills and knowledge upon the end of their compulsory education, looking at how well-prepared they are for life after school. Around 510,000 students in [65 economies](http://www.oecd.org/pisa/aboutpisa/pisa-2012-participants.htm) took part in this survey.
+PISA is a survey of students' skills and knowledge upon the end of their compulsory education, looking at how well-prepared they are for life after school. Around 486,000 students in [65 countries](http://www.oecd.org/pisa/aboutpisa/pisa-2012-participants.htm) took part in this survey.
 
 The full dataset can be found [here](https://s3.amazonaws.com/udacity-hosted-downloads/ud507/pisa2012.csv.zip) and the explanation for each column can be found [here](https://s3.amazonaws.com/udacity-hosted-downloads/ud507/pisadict2012.csv).
 
-The overall motivation for this project is to *explore what factors shape a student's self-esteem and academic performance*. To do this, I diverge on 2 different paths: examining both ***environmental*** and ***demographic*** variables.
+After combing through the original dataset, I decided that I needed a solid 10-15 variables to isolate for the scope of this project. My data wrangling process can be found [here](https://github.com/nihlan97/Communicate-Data-Findings/blob/master/pisa_wrangle.ipynb) along with the [slides]().
 
 
 ## Summary of Findings
-
--add
 
 
 ### Univariate
@@ -53,13 +51,11 @@ When including the outlier at Rating = 2, the Work Ethic kernel density curve an
 
 - Italy and Denmark host the students from immigrant backgrounds who feel the most acclimated to their environment. However, the only exception where student from immigrant backgrounds feel less acclimated is in Korea. This makes sense, considering that Korea is one of the most homogenous countries on Earth.
 
-- The trends are different among gender per math score. Boys tend to outperform girls on math while girls tend to outperform boys for reading. The gender gap, however, is much more varied for science scores.
+- Boys tend to outperform girls on math while girls tend to outperform boys for reading. The gender gap, however, is much more varied for science scores.
 
 ## Key Insights for Presentation
 
-> Select one or two main threads from your exploration to polish up for your presentation. Note any changes in design from your exploration step here.
-
 - Female students tend to have a greater work ethic than male students, but a far lesser self-esteem.
 
-- students from immigrant families tend to have more pessimistic views of themselves under student drive variables, but consistently outperform non-immigrant students by a large margin. We established previously that students from immigrant backgrounds tend to acclimate better to their environment. However, we added a layer of complexity by comparing ***acclimation rates of students from immigrant backgrounds by country.*** From the above selected countries, Denmark and Italy 
+- students from immigrant families tend to have more pessimistic views of themselves, but consistently outperform non-immigrant students by a large margin. We established previously that students from immigrant backgrounds tend to acclimate better to their environment. However, we added a layer of complexity by comparing ***acclimation rates of students from immigrant backgrounds by country.*** From the above selected countries, Denmark and Italy 
 
