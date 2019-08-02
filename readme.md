@@ -63,4 +63,4 @@ When including the outlier at Rating = 2, the Work Ethic kernel density curve an
 1. Navigate to `Communicate-Data-Findings/`
 2. type `jupyter nbconvert pisa2012_explanatory_slides.ipynb --to slides --template output_toggle.tpl --post serve`
 
-**To deal with the original dataset, download the full original PISA 2012 dataset linked above and move it to the `data/` folder.
+**To deal with the original dataset, download the full original PISA 2012 dataset linked above and move it to the `data/` folder.**
