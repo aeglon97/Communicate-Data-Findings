@@ -51,8 +51,8 @@ After immigrant background, the exploratory phase raised many interesting questi
 
 Afterwards, I explore the question of **is girls' outperformance in reading scores over boys due to their higher work ethic? What about the other scores?** After using line plots to correlate work-ethic on the x-axis and math, reading, & science scores on the y-axis separately for both genders, I draw my conclusions at the end.
 
-**To view my presentation, navigate to the terminal and follow these steps:**
-1. Navigate to `Communicate-Data-Findings/`
-2. type `jupyter nbconvert pisa2012_explanatory_slides.ipynb --to slides --template output_toggle.tpl --post serve`
+**To convert my Jupyter Notebook slides, navigate to the terminal and follow these steps:**
+1. Navigate to `/Communicate-Data-Findings/`
+2. type `jupyter nbconvert pisa2012_explanatory.ipynb --to slides --template output_toggle.tpl --post serve`
 
-**To deal with the original dataset, download the full original PISA 2012 dataset linked above and move it to the `data/` folder.**
+**To deal with the original dataset, download the full original PISA 2012 dataset linked above and move it to the `/data/` folder.**
