@@ -4,11 +4,11 @@
 
 ## Dataset
 
-PISA is a survey of students' skills and knowledge upon the end of their compulsory education, looking at how well-prepared they are for life after school. Around 486,000 students in [65 countries](http://www.oecd.org/pisa/aboutpisa/pisa-2012-participants.htm) took part in this survey.
+PISA is a survey of students' skills and knowledge which takes place at the end of their compulsory education, looking at how well-prepared students are for life after school. Around 486,000 students in [65 countries](http://www.oecd.org/pisa/aboutpisa/pisa-2012-participants.htm) took part in this survey.
 
 The full dataset can be found [here](https://s3.amazonaws.com/udacity-hosted-downloads/ud507/pisa2012.csv.zip) and the explanation for each column can be found [here](https://s3.amazonaws.com/udacity-hosted-downloads/ud507/pisadict2012.csv).
 
-After combing through the original dataset, I decided that I needed a solid 10-15 variables to isolate for the scope of this project. My data wrangling process can be found [here](https://github.com/nihlan97/Communicate-Data-Findings/blob/master/pisa2012_wrangle.ipynb) along with the [slides](https://github.com/nihlan97/Communicate-Data-Findings/blob/master/pisa2012_explanatory_slides.slides.html).
+After combing through the original dataset, I decided that I needed a solid 10-15 variables to isolate for the scope of this project. My data wrangling process can be found [here](https://github.com/nihlan97/Communicate-Data-Findings/blob/master/pisa2012_wrangle.ipynb), exploration phase where I describe all features in-depth [here](https://github.com/nihlan97/Communicate-Data-Findings/blob/master/pisa2012_exploratory.html), along with the presentation [slides](https://github.com/nihlan97/Communicate-Data-Findings/blob/master/pisa2012_explanatory_slides.slides.html).
 
 
 ## Summary of Findings
@@ -16,48 +16,40 @@ After combing through the original dataset, I decided that I needed a solid 10-1
 
 ### Univariate
 
-***All variables under Environment and Student Drive sections appear right-skewed, with the exception of Work Ethic without the outlier. This indicates that of the students who answered those questions, the majority picked answers that were more favorable to their self-image and/or perception of the school.***
+***All Environment and Student Drive variables appear heavily left-skewed, with the exception of Work Ethic which has an outlier of score = 2. This indicates that of the students who answered these 2 variable groups, the averange student picked answers that were more favorable to their self-image and/or perception of the school.*** The outlier at Rating = 2 under Work Ethic is so significant that it *affects the entire distribution, making it multimodal as opposed to more or less a normal distribution without it.* 
 
-**Mother Occupation** - "Housewife" is the most common occupation for a student's mother to have, out of all students who answered this question. This is an unusual point because in comparison to the 2nd most common mother occupation, "shop sales assistant," the difference in frequency is 19.9%, with 24.1% for Housewife and 4.2% for Shop sales assistant.
-
-**Mother Immigrant** - Of all the students who answered the Mother Immigrant question, the overwhelming majority of students answered "yes" at 77.83%. This will be an interesting variable to dig more in-depth in the future exploration stages.
-
-**Work Ethic** - The outlier at Rating = 2 is so significant that it ***affects the entire distribution***.
-
-When including the outlier at Rating = 2, the Work Ethic kernel density curve and histogram display a severe left-skew. However, without this outlier, the distribution appears more or less normally distributed. This raises the question of: ***to include or not to include the outlier?*** I have decided that for future exploration, it would be more beneficial to examine this variable in both scenarios: with and without.
-
+As for mother occupation, I found that "Housewife" is the most common mother occupation at 24.1%. This is an unusual point because the difference is drastic in comparison to the second most common mother occupation, "Shop sales assistant," at 4.2%. The difference in the top 2 most common mother occupations is 19.9%. As for students who answered "Yes" or "No" to mother immigration status, the overwhelming majority answered "Yes" at 77.83%. 
 
 ### Bivariate
 
-- This is a key takeaway: students from immigrant families tend to have more pessimistic views of themselves under student drive variables, but consistently outperform non-immigrant students by a large margin. 
+One of the main takeaways is that ***students with immigrant mothers tend to have more pessimistic views of themselves under student drive variables, but consistently outperform non-immigrant students by a large margin.*** This is interesting coupled with the fact that students with immigrant mothers acclimate better to their environment than students who do not come from an immigrant background.
 
-- Female students tend to have a greater work ethic than male students, but a much lower self esteem in comparison.
+The second main insight is that ***girls tend to have a greater work ethic than male students, but a much lower self-esteem in comparison.***
 
-- Students with mothers who work as Drivers of carriages/other hard labor work are the most likely to score the worst on math, reading, and science, ***however***, they score higher for work ethic.
+Other relationships include the fact that even though Mexico is the most frequently occurring country, it is in the bottom 15 of countries that scored the worst for math, reading, and science scores. Students whose mothers work primarily blue-collar jobs are the most likely to score the worst on math, reading, and science ***however***, they tend to score higher for work ethic. Contrarily, students with parents who work in STEM and/or other white collar jobs exclusively score the highest for math, reading, and science - this means that a student is less likely to score well on tests if their parents hold blue-collar jobs.
 
-- Even though Mexico is the most frequently occurring country, it is in the bottom 15 of countries that scored the worst for math, reading, and science.
-
-- Students with parents who work in STEM and/or other white collar jobs exclusively score the highest for math, reading, and science. You are less likely to score well on tests if your parents hold blue-collar jobs.
-
-- Shanghai, China dominates by a large margin every other country when it comes to scores
-
-- Students who come from an immigrant background acclimate better to their environment than students who are not from immigrant backgrounds.
+Additionally, Shanghai, China dominates every other country when it comes to landing the global highest math, reading, and science scores. 
 
 ### Multivariate
 
-- The previous plots depicted that girls score better than boys on reading tests for all countries. However, I dove in a little deeper and ***analyzed how work ethic impacted scores for both genders.*** Despite girls having an overall higher work ethic, if a boy and girl had the same work ethic score, the boy is most certainly guaranteed to score higher for math. The contrary is true for reading scores, where girls prevail. *Perhaps this is reflective of the culture of girls being discouraged from pursuing STEM.*
+For this section, I wanted to explore my previous two main takeaways from in-depth.
 
-- We established previously that students from immigrant backgrounds tend to acclimate better to their environment. However, we added a layer of complexity by comparing ***acclimation rates of students from immigrant backgrounds by country.*** From the above selected countries, Denmark and Italy 
+Rather than just correlating having an immigrant mother to student drive and acculturation scores, I wanted to ***analyze how acculturation rates varied for students from immigrant backgrounds by country***. Through this exploration, I discovered that Italy and Denmark host the students who, on average, feel the most acclimated to their environment. However, the only exception where students from immigrant backgrounds scored less than non-immigrant children is Korea. This makes sense, considering that Korea is one of the most homogenous countries on Earth. 
 
-- Italy and Denmark host the students from immigrant backgrounds who feel the most acclimated to their environment. However, the only exception where student from immigrant backgrounds feel less acclimated is in Korea. This makes sense, considering that Korea is one of the most homogenous countries on Earth.
+The previous plots depicted that girls score better than boys on reading tests for all countries. However, I dove in a little deeper and ***analyzed how work ethic impacted scores for both genders.*** Despite girls having an overall higher work ethic, if a boy and girl had the same work ethic score, the boy is most certainly guaranteed to score higher for math. The contrary is true for reading scores, where girls prevail. *Perhaps this is reflective of the culture of girls being discouraged from pursuing STEM.*
 
-- Boys tend to outperform girls on math while girls tend to outperform boys for reading. The gender gap, however, is much more varied for science scores.
 
 ## Key Insights for Presentation
 
-- Female students tend to have a greater work ethic than male students, but a far lesser self-esteem.
+For my presentation, I narrowed my focus to the following 2 approaches:
 
-- students from immigrant families tend to have more pessimistic views of themselves, but consistently outperform non-immigrant students by a large margin. We established previously that students from immigrant backgrounds tend to acclimate better to their environment. However, we added a layer of complexity by comparing ***acclimation rates of students from immigrant backgrounds by country.*** From the above selected countries, Denmark and Italy 
+### Approach 1: Immigrant Background by Student Drive and Academic Performance
+Here I examine the question of how having an immigrant mother can impact a student's self-perception, acculturation, and scoring. First I look at the distribution of students with immigrant mothers through a pie chart, correlate them to all student drive variables using box plots, then examine all math, reading, and science scores using both box plots and histograms.
+
+### Approach 2: Gender by Student Drive and Academic Performance
+After immigrant background, the exploratory phase raised many interesting questions surrounding gender. First I look at the distribution of gender, which is about evenly split, using a pie chart. Using box plots again, I then proceed to examine work ethic and self-esteem rates between boys and girls, and then look at score distribution by box plots and histograms.
+
+Afterwards, I explore the question of **is girls' outperformance in reading scores over boys due to their higher work ethic? What about the other scores?** After using line plots to correlate work-ethic on the x-axis and math, reading, & science scores on the y-axis separately for both genders, I draw my conclusions at the end.
 
 **To view my presentation, navigate to the terminal and follow these steps:**
 1. Navigate to `Communicate-Data-Findings/`
