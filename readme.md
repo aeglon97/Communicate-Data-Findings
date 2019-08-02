@@ -8,7 +8,7 @@ PISA is a survey of students' skills and knowledge upon the end of their compuls
 
 The full dataset can be found [here](https://s3.amazonaws.com/udacity-hosted-downloads/ud507/pisa2012.csv.zip) and the explanation for each column can be found [here](https://s3.amazonaws.com/udacity-hosted-downloads/ud507/pisadict2012.csv).
 
-After combing through the original dataset, I decided that I needed a solid 10-15 variables to isolate for the scope of this project. My data wrangling process can be found [here](https://github.com/nihlan97/Communicate-Data-Findings/blob/master/pisa_wrangle.ipynb) along with the [slides]().
+After combing through the original dataset, I decided that I needed a solid 10-15 variables to isolate for the scope of this project. My data wrangling process can be found [here](https://github.com/nihlan97/Communicate-Data-Findings/blob/master/pisa2012_wrangle.ipynb) along with the [slides]().
 
 
 ## Summary of Findings
@@ -59,3 +59,8 @@ When including the outlier at Rating = 2, the Work Ethic kernel density curve an
 
 - students from immigrant families tend to have more pessimistic views of themselves, but consistently outperform non-immigrant students by a large margin. We established previously that students from immigrant backgrounds tend to acclimate better to their environment. However, we added a layer of complexity by comparing ***acclimation rates of students from immigrant backgrounds by country.*** From the above selected countries, Denmark and Italy 
 
+**To view my presentation, navigate to the terminal and follow these steps:**
+1. Navigate to `Communicate-Data-Findings/`
+2. type `jupyter nbconvert pisa2012_explanatory_slides.ipynb --to slides --template output_toggle.tpl --post serve`
+
+**To deal with the original dataset, download the full original PISA 2012 dataset linked above and move it to the `data/` folder.
