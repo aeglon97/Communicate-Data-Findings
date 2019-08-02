@@ -8,7 +8,7 @@ PISA is a survey of students' skills and knowledge upon the end of their compuls
 
 The full dataset can be found [here](https://s3.amazonaws.com/udacity-hosted-downloads/ud507/pisa2012.csv.zip) and the explanation for each column can be found [here](https://s3.amazonaws.com/udacity-hosted-downloads/ud507/pisadict2012.csv).
 
-After combing through the original dataset, I decided that I needed a solid 10-15 variables to isolate for the scope of this project. My data wrangling process can be found [here](https://github.com/nihlan97/Communicate-Data-Findings/blob/master/pisa2012_wrangle.ipynb) along with the [slides]().
+After combing through the original dataset, I decided that I needed a solid 10-15 variables to isolate for the scope of this project. My data wrangling process can be found [here](https://github.com/nihlan97/Communicate-Data-Findings/blob/master/pisa2012_wrangle.ipynb) along with the [slides](https://github.com/nihlan97/Communicate-Data-Findings/blob/master/pisa2012_explanatory_slides.slides.html).
 
 
 ## Summary of Findings
